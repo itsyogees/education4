@@ -1,0 +1,226 @@
+.signinContainer {
+    display: flex;
+    padding: 20px;
+    margin: 0;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.signinForm {
+    flex: 1;
+    max-width: 37%;
+    margin-left: 12%;
+    background: #CDCCFF;
+    padding: 90px 60px;
+
+    h3 {
+        font-size: 36px;
+    }
+
+    .signinInputs {
+        margin: 20px 0;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            font-size: 18px;
+
+            &:focus {
+                border-color: #5751E1;
+                outline: none;
+            }
+
+            &.input-error {
+                border-color: red;
+            }
+        }
+    }
+
+    .passwordContainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        span {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            padding: 10px;
+            transform: translateY(-50%);
+            color: #5751E1;
+
+            &:hover {
+                color: #5751E5;
+            }
+        }
+    }
+
+    .forgotPassword {
+        text-align: right;
+
+        span {
+            color: #5751E5;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .btns {
+        margin: 15px 0;
+
+        .signinBtn {
+            width: 100%;
+            padding: 20px 15px;
+            font-size: 20px;
+            background-color: #5751E1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #4742de;
+            }
+        }
+
+        .googleBtn {
+            width: 100%;
+            padding: 20px 15px;
+            font-size: 18px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .googleIcon {
+                margin: 0px 15px;
+            }
+        }
+
+        p {
+            font-size: 19px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+
+            span {
+                color: #5751E1;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.signinImg {
+    //flex: 1;
+    position: relative;
+    background-color: white;
+    width: 40%;
+
+    img {
+        max-width: 100%;
+        //height: 100%;
+        padding-top: 25%;
+        mix-blend-mode: multiply;
+
+    }
+
+    .logoImg {
+        position: absolute;
+        display: flex;
+        top: 15px;
+        right: 30%;
+
+        img {
+            max-width: 90%;
+            //height: auto;
+            mix-blend-mode: multiply;
+        }
+        
+        /*p {
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bold;
+        }*/
+    }
+}
+
+// Media Queries 
+@media (max-width: 599px) { 
+    .signinContainer {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+    }
+
+    .signinForm {
+        max-width: 90%; 
+        margin: 0;
+        padding: 30px; 
+    }
+
+    .signinImg {
+        display: none; 
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .signinContainer {
+        flex-direction: row; 
+       justify-content: center;
+    }
+
+    .signinForm {
+        max-width: 60%; 
+        margin-left: 5%; 
+        padding: 40px;
+    }
+
+    .signinImg {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .signinImg {
+        display: block; 
+    }
+}
